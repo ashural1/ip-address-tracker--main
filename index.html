@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mine.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=a6c7fb20-038a-4504-a7ab-25e395ce2cc1 key&lang=en_US"
+      type="text/javascript"
+    ></script>
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form>
+        <input
+          type="text"
+          id="url-input"
+          placeholder="Search for any IP address"
+          aria-label="Search for any IP address"
+        />
+        <button id="search-button">></button>
+        <p id="error-message" class="error-message"></p>
+      </form>
+    </header>
+
+    <main>
+      <div class="info-container">
+        <div class="info-section">
+          <p class="info-title">IP Address</p>
+          <p id="ip-address" class="info-content"></p>
+        </div>
+        <div class="info-section">
+          <p class="info-title">
+            Location
+            <span class="tooltip">
+              ?
+              <span class="tooltip-text">
+                Based on the IP Address of your computer. May vary from your
+                actual location.
+              </span>
+            </span>
+          </p>
+          <p id="city" class="info-content"></p>
+        </div>
+        <div class="info-section">
+          <p class="info-title">Timezone</p>
+          <p id="timezone" class="info-content"></p>
+        </div>
+        <div class="info-section">
+          <p class="info-title">ISP</p>
+          <p id="isp" class="info-content"></p>
+        </div>
+      </div>
+
+      <div id="map"></div>
+    </main>
+  </body>
+  <script src="mine.js"></script>
+</html>
